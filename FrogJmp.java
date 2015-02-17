@@ -5,7 +5,7 @@ class Solution {
         int steps = 0;
         if( D != 0){
             if((diff % D) == 0)
-                steps = diff %  D;
+                steps = diff /  D;
             else
                 steps = diff / D + 1;
         }
