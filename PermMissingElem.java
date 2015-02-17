@@ -4,10 +4,10 @@ class Solution {
         int len = A.length;
         int max = 0;
         int counter = 0;
-        if(len == 0)
-            return 0;
-        int[] count = new int[len+1];
         int missing = 0;
+        int[] count = new int[len+1];
+        if(len == 0 )
+            missing = 1;
         for(int i = 0; i < len; i++){
             if(max < A[i]){
                 max = A[i];
