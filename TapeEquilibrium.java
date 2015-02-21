@@ -11,9 +11,8 @@ class Solution {
         for(int i = 0; i < A.length-1; i++){
             leftsum += A[i];
             rightsum = sum-leftsum;
-            int min = Math.abs(rightsum-leftsum);
-            if(min_diff > min){
-               min_diff = min;
+            if(min_diff > Math.abs(rightsum-leftsum)){
+               min_diff = Math.abs(rightsum-leftsum);
            }
         }    
         return min_diff;
