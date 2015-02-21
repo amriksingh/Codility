@@ -1,16 +1,16 @@
 class Solution {
     public int solution(int[] A) {
         // write your code in Java SE 8
-        int sum = 0;
-        int p = 0;
-        int min_diff = A[0];
+        int leftsum = 0;
+        int rightsum = 0;
+        int min_diff = Integer.MAX_VALUE;
         for(int i = 0 ; i < A.length; i++){
-            sum += A[i];
+            leftsum += A[i];
         }
-        for(int i = 0; i < A.length-1; i++){
-            p += A[i];
-           int diff = Math.abs(sum-p);
-           int min = Math.abs(p-diff);
+        for(int i = 0; i < A.length; i++){
+            rightsum += A[i];
+           int diff = Math.abs(leftsum-rightsum);
+           int min = Math.abs(rightsum-diff);
            if(min_diff > min){
                min_diff = min;
            }
