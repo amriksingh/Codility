@@ -8,7 +8,7 @@ class Solution {
         for(int i = 0 ; i < A.length; i++){
             sum += A[i];
         }
-        for(int i = 0; i < A.length; i++){
+        for(int i = 0; i < A.length-1; i++){
             leftsum += A[i];
             rightsum = sum-leftsum;
             int min = Math.abs(rightsum-leftsum);
