@@ -3,7 +3,7 @@ class Solution {
         int jmp = 0;
         int[] count = new int[A.length+1];
         for(int i = 0; i < A.length; i++){
-            if(A[i] <= X && A[i] < A.length){
+            if(A[i] <= X && A[i] <= A.length){
                     if(count[A[i]] == 0){
                         count[A[i]] = A[i];
                         jmp++;
